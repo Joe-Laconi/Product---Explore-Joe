@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  Design principle behind this whole page (not shown in the UI):
+  The hiring manager's job-to-be-done is to determine, in 3–5 minutes,
+  whether Joe can think like a Growth PM and whether they want to talk
+  to him. Every major section should serve that JTBD.
+-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Explore Joe Laconi — A Growth PM, who builds.</title>
+<meta name="description" content="Joe Laconi — A Growth PM, who builds. Customer discovery, product development, data, GTM, and independently shipped products: Culture To Cart, All For, and American Consumer Clock." />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Explore Joe Laconi — A Growth PM, who builds." />
+<meta property="og:description" content="Customer discovery, product development, data, GTM, and independently shipped products." />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Explore Joe Laconi</a>
+    <nav class="util-nav" aria-label="Utility">
+      <a href="#resume">Resume</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ SIDE RAIL ============ -->
+<nav class="side-rail" id="side-rail" aria-label="Page sections">
+  <span class="rail-title">Explore Joe</span>
+  <ul id="rail-list">
+    <li><a href="#top" data-target="top"><span class="dot"></span><span class="rail-label">Start</span></a></li>
+    <li><a href="#how-i-think" data-target="how-i-think"><span class="dot"></span><span class="rail-label">How I Think</span></a></li>
+    <li><a href="#work" data-target="work"><span class="dot"></span><span class="rail-label">What I've Built</span></a></li>
+    <li><a href="#experience" data-target="experience"><span class="dot"></span><span class="rail-label">Experience</span></a></li>
+    <li><a href="#beyond" data-target="beyond"><span class="dot"></span><span class="rail-label">Beyond the Resume</span></a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1 class="hero-title">Explore Joe Laconi</h1>
+      <p class="hero-subhead">A Growth PM, who builds.</p>
+      <p class="hero-lede">
+        My path runs through customer discovery, product development, data and analytics, and GTM —
+        and for the last two years I've also been independently building and launching products,
+        not just advising on them.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ START HERE (primary navigation) ============ -->
+  <section class="start-here" id="start">
+    <div class="wrap">
+      <p class="start-here-label">Start here</p>
+      <div class="start-grid" id="start-grid">
+        <a href="#how-i-think" class="start-card" data-track="start_here" data-id="how-i-think">
+          <span class="start-num">01</span>
+          <span class="start-label">How I Think</span>
+          <span class="start-desc">See how I approach product problems.</span>
+        </a>
+        <a href="#work" class="start-card" data-track="start_here" data-id="work">
+          <span class="start-num">02</span>
+          <span class="start-label">What I've Built</span>
+          <span class="start-desc">See the strongest evidence.</span>
+        </a>
+        <a href="#experience" class="start-card" data-track="start_here" data-id="experience">
+          <span class="start-num">03</span>
+          <span class="start-label">Experience</span>
+          <span class="start-desc">See where the skills came from.</span>
+        </a>
+        <a href="#beyond" class="start-card" data-track="start_here" data-id="beyond">
+          <span class="start-num">04</span>
+          <span class="start-label">Beyond the Resume</span>
+          <span class="start-desc">Meet the person.</span>
+        </a>
+      </div>
+      <div class="why-annotation-wrap centered">
+        <button class="why-annotation" data-why="startHere" aria-expanded="false">Why I built it this way <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW I THINK ============ -->
+  <section class="section how-i-think" id="how-i-think">
+    <div class="wrap">
+      <p class="eyebrow">01 — How I Think</p>
+      <h2 class="section-title">Watch me think, not just read that I can.</h2>
+      <p class="section-sub">Three real decisions. Same structure every time: what was happening, what I saw, what I believed, what I did, and what happened.</p>
+      <div class="why-annotation-wrap">
+        <button class="why-annotation" data-why="howIThink" aria-expanded="false">Why I built it this way <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="decisions" id="decisions"></div>
+    </div>
+  </section>
+
+  <!-- ============ GIVE ME A PROBLEM ============ -->
+  <section class="section alt problem-section" id="give-me-a-problem">
+    <div class="wrap">
+      <p class="eyebrow">Try it live</p>
+      <h2 class="section-title">Give me a problem.</h2>
+      <p class="section-sub">See how I'd think about a product problem before I had the answer.</p>
+      <div class="scenario-grid" id="scenario-grid" role="group" aria-label="Choose a scenario"></div>
+      <div class="scenario-output" id="scenario-output" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ COMPANY-SPECIFIC TEARDOWN ============ -->
+  <section class="section alt opportunities-section" id="opportunities" hidden>
+    <div class="wrap">
+      <p class="eyebrow">Applied, not generic</p>
+      <h2 class="section-title" id="opportunities-title">Growth opportunities I'd investigate.</h2>
+      <p class="section-sub">Structure only for now — Observation, Hypothesis, Experiment, Metric. The actual analysis comes next, developed separately rather than guessed at here.</p>
+      <div class="opportunities-grid" id="opportunities-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I'VE BUILT ============ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <p class="eyebrow">02 — What I've Built</p>
+      <h2 class="section-title">The strongest evidence.</h2>
+      <p class="section-sub">Three products, three different starting points. Order below reflects what you're hiring for.</p>
+      <div class="case-studies" id="case-studies"></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section alt" id="experience">
+    <div class="wrap">
+      <p class="eyebrow">03 — Experience</p>
+      <h2 class="section-title">Where the skills came from.</h2>
+      <div class="progression" id="career-progression" aria-label="Career progression"></div>
+      <p class="section-body large" id="why-product-body"></p>
+      <ol class="timeline" id="timeline"></ol>
+      <details class="toolkit-disclosure">
+        <summary>See the full toolkit, mapped to evidence</summary>
+        <div class="toolkit-lifecycle" id="toolkit-lifecycle"></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ BEYOND THE RESUME ============ -->
+  <section class="section beyond-resume" id="beyond">
+    <div class="wrap wrap-narrow">
+      <p class="eyebrow">04 — Beyond the Resume</p>
+      <h2 class="section-title" id="beyond-headline">Okay, but who is Joe?</h2>
+      <p class="section-sub" id="beyond-intro"></p>
+      <div class="personal-grid" id="personal-grid"></div>
+
+      <div class="closing-lists">
+        <div class="closing-col">
+          <h3 class="closing-heading">Hire me if you want someone who&hellip;</h3>
+          <ul class="hire-list" id="hire-list"></ul>
+        </div>
+        <div class="closing-col">
+          <h3 class="closing-heading">Still working on</h3>
+          <ul class="learning-list" id="learning-list"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOW YOUR WORK ============ -->
+  <section class="section evidence-section" id="show-work">
+    <div class="wrap">
+      <p class="eyebrow">Show the work</p>
+      <h2 class="section-title">How I actually got here.</h2>
+      <p class="section-sub">Screenshots, prototypes, experiments, failures, iterations, decisions, results — pulled from across everything above, not claimed in the abstract. Reusable component; fills in as material gets developed.</p>
+      <div class="why-annotation-wrap">
+        <button class="why-annotation" data-why="showWork" aria-expanded="false">Why I built it this way <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="evidence-grid" id="evidence-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ HOW I BUILT THIS (appendix) ============ -->
+  <section class="section alt why-built-section" id="why-built">
+    <div class="wrap">
+      <p class="eyebrow">Appendix — how I built this</p>
+      <h2 class="section-title" id="why-built-headline">How I built this.</h2>
+      <p class="section-sub" id="why-built-intro"></p>
+      <div class="built-context" id="built-context"></div>
+      <div class="decisions" id="built-decisions"></div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section class="section resume-section" id="resume">
+    <div class="wrap">
+      <p class="eyebrow">Prefer it as a resume?</p>
+      <h2 class="section-title">Resume.</h2>
+      <p class="section-sub">Same underlying experience, reordered by focus. Or skip straight to the PDF.</p>
+      <div class="resume-modes" id="resume-modes" role="group" aria-label="Choose a resume view"></div>
+      <ol class="timeline resume-timeline" id="resume-timeline"></ol>
+      <div class="resume-download">
+        <a href="#" class="btn btn-ghost" id="resume-pdf-link">Download PDF resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section alt contact" id="contact">
+    <div class="wrap wrap-narrow">
+      <h2 class="section-title">Let's talk.</h2>
+      <p class="section-body large" id="looking-body"></p>
+      <p class="section-body" id="looking-interests"></p>
+      <div class="contact-actions">
+        <a href="#" id="contact-email" class="btn btn-primary">Email Joe</a>
+        <a href="#" id="contact-linkedin" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#resume" class="btn btn-ghost">Resume</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Joe Laconi — built, not templated.</p>
+    <p class="footer-meta" id="footer-role"></p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
